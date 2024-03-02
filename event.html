@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+
+    <header>
+        <h1>Events</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutus.html">About us</a></li>
+            <li><a href="dashboard.html">Dashboard</a></li>
+          
+            <li><a href="directory.html">Directory</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="event" id="event1">
+        <h2>Event Title 1</h2>
+        <p>Date: October 15, 2023</p>
+        <p>Time: 7:00 PM</p>
+        <p>Venue: Alumni Hall</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+
+    <section class="event" id="event2">
+        <h2>Event Title 2</h2>
+        <p>Date: November 10, 2023</p>
+        <p>Time: 6:30 PM</p>
+        <p>Venue: Conference Room</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </section>
+
+    <script>
+        // JavaScript to check if the event is upcoming or past
+        const today = new Date();
+
+        // Event 1 (October 15, 2023)
+        const event1Date = new Date('2023-10-15T19:00:00');
+        if (event1Date > today) {
+            document.getElementById('event1').style.display = 'block';
+        } else {
+            document.getElementById('event1').style.display = 'none';
+        }
+
+        // Event 2 (November 10, 2023)
+        const event2Date = new Date('2023-11-10T18:30:00');
+        if (event2Date > today) {
+            document.getElementById('event2').style.display = 'block';
+        } else {
+            document.getElementById('event2').style.display = 'none';
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2023 Events</p>
+    </footer>
+
+</body>
+</html>
